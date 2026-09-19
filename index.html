@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohib Ahmad — Creative Flutter Architect</title>
+
+<meta name="description" content="Mohib Ahmad — Creative Flutter Architect crafting motion-first, high-performance mobile experiences.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body aria-busy="true">
+
+<!-- BACKGROUND -->
+
+<div class="bg" aria-hidden="true"><div class="bg-orb o1"></div><div class="bg-orb o2"></div></div>
+
+<div class="grain"></div>
+
+<!-- CURSOR -->
+
+<div class="cursor-ring"></div>
+
+<div class="cursor-dot"></div>
+
+<!-- SKIP LINK -->
+<a href="#hero" class="skip-link">Skip to content</a>
+
+<main class="page-wrap">
+
+<!-- PRELOADER -->
+
+<div class="loader" id="loader">
+  <div class="loader-top">
+    <div class="lt-l"><span>●</span> Portfolio — 2026</div>
+    <div>Mohib Ahmad</div>
+  </div>
+  <div class="loader-center">
+    <div class="loader-name"><span>Creative</span><span>Flutter Architect</span></div>
+  </div>
+  <div class="loader-bottom">
+    <div class="loader-count" id="loaderCount">0</div>
+    <div>
+      <div class="loader-bar"><i id="loaderBar"></i></div>
+      <div class="loader-status">Loading experience</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+
+<div class="progress" id="progress"></div>
+
+<!-- NAV -->
+
+<nav class="nav" id="nav" aria-label="Main Navigation">
+  <a href="#hero" class="nav-logo"><i aria-hidden="true"></i>Mohib Ahmad</a>
+  <div class="nav-menu" id="navMenu" role="navigation">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="Mohib-Ahmad-Resume.pdf" download class="nav-resume" aria-label="Download Resume (PDF)">Resume ↗</a>
+    <a href="#contact" class="nav-cta">Let's talk
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-top">
+          <div class="hero-status reveal"><span class="pulse"></span>Available for Q3/Q4 2026 · <b>1 slot remaining</b></div>
+          <div class="hero-meta reveal">
+            <b>NDA ready · Avg. reply &lt; 12h · 48 apps delivered</b><br>
+            Projects from $8k–$35k · 4–8 week builds
+          </div>
+        </div>
+        <h1 class="hero-title">
+          <span class="l"><span>Mohib</span></span>
+          <span class="l"><span>Ahmad.</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <div class="hero-role reveal">
+            <p><b>Creative Flutter Architect</b> focusing on 60fps animations, production-grade architecture, and premium UX for iOS & Android.</p>
+          </div>
+          <div class="hero-actions reveal">
+            <a href="#work" class="btn btn-primary magnetic">View Work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="Mohib-Ahmad-Resume.pdf" download class="btn btn-ghost magnetic" aria-label="Download CV (PDF)">Download CV
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-stats-banner reveal">
+          <span><b>48+</b> apps delivered</span>
+          <span class="dot">•</span>
+          <span><b>1.2M</b> downloads</span>
+          <span class="dot">•</span>
+          <span><b>4.8★</b> avg rating</span>
+          <span class="dot">•</span>
+          <span><b>6+ yrs</b> Flutter</span>
+        </div>
+        <div class="scroll-cue reveal" aria-hidden="true"><div class="stick"><i aria-hidden="true"></i></div>Scroll to explore</div>
+      </div>
+      <div class="tech-canvas-wrap reveal">
+        <canvas id="particleCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+
+<div class="marquee">
+  <div class="marquee-track" id="marquee"></div>
+</div>
+
+<!-- FEATURED IN -->
+<section class="featured-in sec-pad" aria-labelledby="featured-heading">
+  <div class="wrap">
+    <div class="fi-title reveal" id="featured-heading">Trusted by & Featured in</div>
+    <div class="fi-logos reveal">
+      <div class="fi-logo">Forbes</div>
+      <div class="fi-logo">TechCrunch</div>
+      <div class="fi-logo">Google Devs</div>
+      <div class="fi-logo">Awwwards</div>
+      <div class="fi-logo">Smashing</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="sec-pad" id="about" aria-labelledby="about-heading">
+  <div class="wrap">
+    <h2 class="sec-label reveal" id="about-heading"><span class="idx">(01)</span><span class="ln"></span>About</h2>
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="portrait" id="portrait">
+          <div class="pt-img" role="img" aria-label="Portrait of Mohib Ahmad"></div>
+          <div class="pt-grad"></div>
+          <div class="pt-noise"></div>
+          <div class="pt-tag">
+            <span>Developer & Designer</span>
+            <b>Mohib Ahmad</b>
+          </div>
+        </div>
+        <div class="pt-stats reveal"><span>Est. <b>2019</b></span><span><b>6+ yrs</b> Flutter</span></div>
+      </div>
+      <div class="about-text">
+        <p class="lead split" data-split>I build apps that feel <em>alive</em> — where motion has purpose and every pixel earns its place.</p>
+        <p class="body reveal">For over <b>six years</b> I've specialised in <b>cross-platform mobile development</b> with Flutter. My work lives at the intersection of engineering and design: clean, scalable architecture wrapped in motion that makes products feel premium and effortless.</p>
+        <p class="body reveal">From micro-interactions and hero animations to complex state management and App Store delivery, I obsess over the details most people never notice — but always feel.</p>
+        <ul class="about-list reveal">
+          <li>MVC, MVVM & BLoC Architecture</li>
+          <li>RESTful APIs & Firebase</li>
+          <li>Push Notifications</li>
+          <li>CI/CD Pipelines</li>
+          <li>Custom Dart Packages</li>
+          <li>Object-Oriented Analysis & UML</li>
+          <li>Git & Version Control</li>
+          <li>Custom Animations & Transitions</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+
+<section class="sec-pad" id="expertise" aria-labelledby="expertise-heading">
+  <div class="wrap">
+    <h2 class="sec-label reveal" id="expertise-heading"><span class="idx">(02)</span><span class="ln"></span>Expertise</h2>
+    <div class="exp-grid">
+      <div class="exp-card" data-pct="95">
+        <div class="exp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
+        <h3>Flutter & Dart</h3>
+        <p>Production apps, platform channels, custom Dart packages and performance tuning.</p>
+        <div class="exp-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Flutter & Dart proficiency"><i></i></div>
+        <div class="exp-pct"><span>Proficiency</span><b>95%</b></div>
+      </div>
+      <div class="exp-card" data-pct="92">
+        <div class="exp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12c2-4 6-4 9 0s7 4 9 0"/><path d="M3 6c2-4 6-4 9 0s7 4 9 0"/><path d="M3 18c2-4 6-4 9 0s7 4 9 0"/></svg></div>
+        <h3>Animation & Motion</h3>
+        <p>Implicit & explicit animation, Rive, Lottie, hero transitions and physics.</p>
+        <div class="exp-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Animation & Motion proficiency"><i></i></div>
+        <div class="exp-pct"><span>Proficiency</span><b>92%</b></div>
+      </div>
+      <div class="exp-card" data-pct="90">
+        <div class="exp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6M9 18h6M6 9v6M18 9v6"/></svg></div>
+        <h3>State Management</h3>
+        <p>Riverpod, BLoC, MVC & MVVM — predictable, testable, scalable state.</p>
+        <div class="exp-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="State Management proficiency"><i></i></div>
+        <div class="exp-pct"><span>Proficiency</span><b>90%</b></div>
+      </div>
+      <div class="exp-card" data-pct="88">
+        <div class="exp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></div>
+        <h3>Backend & APIs</h3>
+        <p>RESTful APIs, GraphQL, Firebase, realtime data, auth and push notifications.</p>
+        <div class="exp-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Backend & APIs proficiency"><i></i></div>
+        <div class="exp-pct"><span>Proficiency</span><b>88%</b></div>
+      </div>
+      <div class="exp-card" data-pct="85">
+        <div class="exp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <h3>Architecture</h3>
+        <p>MVC, MVVM, Clean Architecture, DDD and UML-driven design.</p>
+        <div class="exp-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Architecture proficiency"><i></i></div>
+        <div class="exp-pct"><span>Proficiency</span><b>85%</b></div>
+      </div>
+      <div class="exp-card" data-pct="87">
+        <div class="exp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7-7-7"/><path d="M5 12h14" stroke="rgba(255,94,58,.7)"/></svg></div>
+        <h3>UI / UX Design</h3>
+        <p>Figma, design systems, prototyping and pixel-perfect implementation.</p>
+        <div class="exp-bar" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" aria-label="UI / UX Design proficiency"><i></i></div>
+        <div class="exp-pct"><span>Proficiency</span><b>87%</b></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec-pad testimonials" aria-labelledby="testimonials-heading">
+  <div class="wrap">
+    <h2 class="sec-label reveal" id="testimonials-heading"><span class="idx">(02.5)</span><span class="ln"></span>Testimonials</h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <p>"Mohib completely transformed our mobile experience. The performance is flawless, and the animations are silky smooth."</p>
+        <div class="testi-author">
+          <b>Sarah Jenkins</b>
+          <span>Product Manager, TechFlow</span>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <p>"An absolute professional. Delivered our complex cross-platform app on time and far exceeded our UX expectations."</p>
+        <div class="testi-author">
+          <b>David Chen</b>
+          <span>CTO, ElevateApp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="sec-pad" id="services" aria-labelledby="services-heading">
+  <div class="wrap">
+    <h2 class="sec-label reveal" id="services-heading"><span class="idx">(03)</span><span class="ln"></span>Services</h2>
+    <div class="svc-list">
+      <a href="#contact" class="svc reveal" aria-label="Inquire about Cross-Platform App Development service">
+        <div class="svc-no">01</div>
+        <div class="svc-name">Cross-Platform App Development</div>
+        <div class="svc-tags"><span>Flutter</span><span>iOS</span><span>Android</span></div>
+        <div class="svc-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a href="#contact" class="svc reveal" aria-label="Inquire about UI / UX & Motion Design service">
+        <div class="svc-no">02</div>
+        <div class="svc-name">UI / UX & Motion Design</div>
+        <div class="svc-tags"><span>Figma</span><span>Rive</span><span>Animation</span></div>
+        <div class="svc-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a href="#contact" class="svc reveal" aria-label="Inquire about App Modernisation & Migration service">
+        <div class="svc-no">03</div>
+        <div class="svc-name">App Modernisation & Migration</div>
+        <div class="svc-tags"><span>Refactor</span><span>Performance</span></div>
+        <div class="svc-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a href="#contact" class="svc reveal" aria-label="Inquire about Backend & API Integration service">
+        <div class="svc-no">04</div>
+        <div class="svc-name">Backend & API Integration</div>
+        <div class="svc-tags"><span>RESTful APIs</span><span>Push Notifications</span><span>Firebase</span></div>
+        <div class="svc-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a href="#contact" class="svc reveal" aria-label="Inquire about App Store Launch & CI/CD service">
+        <div class="svc-no">05</div>
+        <div class="svc-name">App Store Launch & CI/CD</div>
+        <div class="svc-tags"><span>CI/CD Pipelines</span><span>Git</span><span>Fastlane</span></div>
+        <div class="svc-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WORK — HORIZONTAL -->
+
+<section class="work sec-pad" id="work" aria-labelledby="work-heading">
+  <div class="work-pin">
+    <div class="work-head wrap">
+      <div>
+        <span class="sec-label" style="margin-bottom:14px"><span class="idx">(04)</span><span class="ln"></span>Selected Work</span>
+        <h2 class="split h-display" id="work-heading" data-split>Featured projects</h2>
+      </div>
+      <div class="work-prog reveal" aria-hidden="true"><span>Scroll →</span><div class="track"><i id="workProg"></i></div></div>
+    </div>
+    <div class="work-track" id="workTrack">
+      <div class="work-intro reveal"><p>A selection of apps I've designed and engineered. Keep scrolling to move through the gallery.</p></div>
+      <article class="wcard">
+        <div class="wc-visual"><img src="case_1.png" alt="Finly App UI Mockup">
+          <div class="wc-no" aria-hidden="true">/ 01</div>
+          <div class="wc-art" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="28" y="14" width="44" height="72" rx="8"/><path d="M38 30h24M38 42h24M38 54h16"/><circle cx="50" cy="76" r="3"/></svg></div>
+        </div>
+        <div class="wc-body">
+          <div class="wc-cat">Fintech · iOS & Android</div>
+          <h3>Finly — Smart Wallet</h3>
+          <div class="wc-metrics"><span><b>85k</b> Downloads</span><span><b>4.9★</b> Rating</span><span><b>99.9%</b> Crash-Free</span></div>
+          <p>Neobank with animated balance cards, biometric auth and realtime transactions.</p>
+          <div class="wc-stack"><span>Flutter</span><span>BLoC</span><span>Firebase</span></div>
+          <div class="wc-actions">
+            <a href="#" class="wc-btn wc-btn-live" aria-label="View live Finly project">Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+            <a href="#" class="wc-btn wc-btn-case" aria-label="Read Finly case study">Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#" class="wc-store" aria-label="Download on App Store" title="App Store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4c.6 1.4.1 3-1.2 4-1 .9-2.5 1-3.2-.2-.6-1.5 0-3 1.2-4C13.8 2.8 15.3 2.6 16 4m-4.5 5.5c2 0 3.2 1.2 4 1.2s2.2-1.2 4-1.2c2.2 0 4 1.5 5 4.5-3 1.3-3.6 5-1 6.5-1 2-2.5 4-4 4-1.5 0-2-1-4-1s-2.5 1-4 1c-1.5 0-3-2-4-4C2 13 4 9 7.5 9c2 0 3 1.2 4 1.2z"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <article class="wcard">
+        <div class="wc-visual"><img src="case_3.png" alt="ShopFlux App UI Mockup">
+          <div class="wc-no" aria-hidden="true">/ 02</div>
+          <div class="wc-art" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M25 34h50l-4 44a6 6 0 01-6 6H35a6 6 0 01-6-6z"/><path d="M38 34V24a12 12 0 0124 0v10"/><circle cx="50" cy="58" r="5"/></svg></div>
+        </div>
+        <div class="wc-body">
+          <div class="wc-cat">E-Commerce</div>
+          <h3>ShopFlux</h3>
+          <div class="wc-metrics"><span><b>2M+</b> Active Users</span><span><b>$15M</b> Processing</span><span><b>4.8★</b> Rating</span></div>
+          <p>Headless commerce with hero transitions, AR try-on and lightning-fast search.</p>
+          <div class="wc-stack"><span>Flutter</span><span>Riverpod</span><span>GraphQL</span></div>
+          <div class="wc-actions">
+            <a href="#" class="wc-btn wc-btn-live" aria-label="View live ShopFlux project">Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+            <a href="#" class="wc-btn wc-btn-case" aria-label="Read ShopFlux case study">Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#" class="wc-store" aria-label="Download on App Store" title="App Store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4c.6 1.4.1 3-1.2 4-1 .9-2.5 1-3.2-.2-.6-1.5 0-3 1.2-4C13.8 2.8 15.3 2.6 16 4m-4.5 5.5c2 0 3.2 1.2 4 1.2s2.2-1.2 4-1.2c2.2 0 4 1.5 5 4.5-3 1.3-3.6 5-1 6.5-1 2-2.5 4-4 4-1.5 0-2-1-4-1s-2.5 1-4 1c-1.5 0-3-2-4-4C2 13 4 9 7.5 9c2 0 3 1.2 4 1.2z"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <article class="wcard">
+        <div class="wc-visual"><img src="case_2.png" alt="Munch App UI Mockup">
+          <div class="wc-no" aria-hidden="true">/ 03</div>
+          <div class="wc-art" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M68 54a20 20 0 11-9-27c8 4 12 12 12 22 0 6-3 12 9 12"/><path d="M44 40v8M48 44h-8"/></svg></div>
+        </div>
+        <div class="wc-body">
+          <div class="wc-cat">Food Delivery</div>
+          <h3>Munch</h3>
+          <div class="wc-metrics"><span><b>400k+</b> Deliveries</span><span><b>4.7★</b> Rating</span></div>
+          <p>Food ordering with live courier tracking on a custom map and playful motion.</p>
+          <div class="wc-stack"><span>Flutter</span><span>Maps SDK</span><span>Rive</span></div>
+          <div class="wc-actions">
+            <a href="#" class="wc-btn wc-btn-live" aria-label="View live Munch project">Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+            <a href="#" class="wc-btn wc-btn-case" aria-label="Read Munch case study">Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#" class="wc-store" aria-label="Download on App Store" title="App Store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4c.6 1.4.1 3-1.2 4-1 .9-2.5 1-3.2-.2-.6-1.5 0-3 1.2-4C13.8 2.8 15.3 2.6 16 4m-4.5 5.5c2 0 3.2 1.2 4 1.2s2.2-1.2 4-1.2c2.2 0 4 1.5 5 4.5-3 1.3-3.6 5-1 6.5-1 2-2.5 4-4 4-1.5 0-2-1-4-1s-2.5 1-4 1c-1.5 0-3-2-4-4C2 13 4 9 7.5 9c2 0 3 1.2 4 1.2z"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <article class="wcard">
+        <div class="wc-visual"><img src="case_2.png" alt="PulseFit App UI Mockup">
+          <div class="wc-no" aria-hidden="true">/ 04</div>
+          <div class="wc-art" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M50 20a30 30 0 010 60"/><path d="M50 30a20 20 0 010 40"/><path d="M50 40a10 10 0 010 20"/><circle cx="50" cy="50" r="3"/></svg></div>
+        </div>
+        <div class="wc-body">
+          <div class="wc-cat">Health & Fitness</div>
+          <h3>PulseFit</h3>
+          <div class="wc-metrics"><span><b>120k</b> Active</span><span><b>Featured</b> App of the Day</span></div>
+          <p>Workout & habit tracker with animated progress rings and celebration effects.</p>
+          <div class="wc-stack"><span>Flutter</span><span>Hive</span><span>Charts</span></div>
+          <div class="wc-actions">
+            <a href="#" class="wc-btn wc-btn-live" aria-label="View live PulseFit project">Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+            <a href="#" class="wc-btn wc-btn-case" aria-label="Read PulseFit case study">Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#" class="wc-store" aria-label="Download on App Store" title="App Store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4c.6 1.4.1 3-1.2 4-1 .9-2.5 1-3.2-.2-.6-1.5 0-3 1.2-4C13.8 2.8 15.3 2.6 16 4m-4.5 5.5c2 0 3.2 1.2 4 1.2s2.2-1.2 4-1.2c2.2 0 4 1.5 5 4.5-3 1.3-3.6 5-1 6.5-1 2-2.5 4-4 4-1.5 0-2-1-4-1s-2.5 1-4 1c-1.5 0-3-2-4-4C2 13 4 9 7.5 9c2 0 3 1.2 4 1.2z"/></svg></a>
+            <a href="#" class="wc-store" aria-label="Get it on Google Play" title="Google Play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 3l14.2 8L4 21V3z"/></svg></a>
+          </div>
+        </div>
+      </article>
+      <article class="wcard">
+        <div class="wc-visual"><img src="case_1.png" alt="Wander App UI Mockup">
+          <div class="wc-no" aria-hidden="true">/ 05</div>
+          <div class="wc-art" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 70l16-20 14 8 18-26 16 14 8-6"/><path d="M14 80h72"/><path d="M30 50V30M60 32V14"/></svg></div>
+        </div>
+        <div class="wc-body">
+          <div class="wc-cat">Travel</div>
+          <h3>Wander</h3>
+          <div class="wc-metrics"><span><b>250k+</b> Downloads</span><span><b>4.8★</b> App Store</span></div>
+          <p>Trip planner with parallax destinations, shared-element transitions and offline mode.</p>
+          <div class="wc-stack"><span>Flutter</span><span>Provider</span><span>Supabase</span></div>
+          <div class="wc-actions">
+            <a href="#" class="wc-btn wc-btn-live" aria-label="View live Wander project">Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+            <a href="#" class="wc-btn wc-btn-case" aria-label="Read Wander case study">Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#" class="wc-store" aria-label="Download on App Store" title="App Store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4c.6 1.4.1 3-1.2 4-1 .9-2.5 1-3.2-.2-.6-1.5 0-3 1.2-4C13.8 2.8 15.3 2.6 16 4m-4.5 5.5c2 0 3.2 1.2 4 1.2s2.2-1.2 4-1.2c2.2 0 4 1.5 5 4.5-3 1.3-3.6 5-1 6.5-1 2-2.5 4-4 4-1.5 0-2-1-4-1s-2.5 1-4 1c-1.5 0-3-2-4-4C2 13 4 9 7.5 9c2 0 3 1.2 4 1.2z"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat-cell reveal"><div class="stat-num"><span data-count="48">0</span><span class="suf">+</span></div><div class="stat-lbl">Apps delivered to production</div></div>
+    <div class="stat-cell reveal"><div class="stat-num"><span data-count="32">0</span><span class="suf">+</span></div><div class="stat-lbl">Clients across the globe</div></div>
+    <div class="stat-cell reveal"><div class="stat-num"><span data-count="1.2" data-decimal="1">0</span><span class="suf">M</span></div><div class="stat-lbl">Combined app downloads</div></div>
+    <div class="stat-cell reveal"><div class="stat-num"><span data-count="6">0</span><span class="suf">+</span></div><div class="stat-lbl">Years building with Flutter</div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+
+<section class="sec-pad" id="process" aria-labelledby="process-heading">
+  <div class="wrap">
+    <span class="sec-label reveal"><span class="idx">(05)</span><span class="ln"></span>Process</span>
+    <h2 class="split h-display" id="process-heading" style="font-size:clamp(2rem,5vw,3.6rem);margin-bottom:54px" data-split>How I turn ideas into shipped apps.</h2>
+    <div class="proc-grid">
+      <div class="proc-step reveal"><div class="pn">Step 01</div><h4>Discover & Define</h4><p>We dig into your goals, users and constraints, then shape a clear roadmap and scope.</p></div>
+      <div class="proc-step reveal"><div class="pn">Step 02</div><h4>Design & Prototype</h4><p>I craft the UI in Figma, build interactive prototypes and plan the motion language.</p></div>
+      <div class="proc-step reveal"><div class="pn">Step 03</div><h4>Develop & Animate</h4><p>Clean, tested Flutter architecture brought to life with smooth, purposeful motion.</p></div>
+      <div class="proc-step reveal"><div class="pn">Step 04</div><h4>Launch & Iterate</h4><p>Store submission, a CI/CD pipeline and ongoing improvements from real feedback.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB & INSIGHTS -->
+<section class="sec-pad lab-insights" aria-labelledby="lab-heading">
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; gap:60px; flex-wrap:wrap">
+      <div style="flex:1; min-width:300px">
+        <h2 class="sec-label reveal" id="lab-heading"><span class="idx">(05.5)</span><span class="ln"></span>The Lab</h2>
+        <p class="reveal" style="margin-bottom:30px; color:var(--dim); font-size:1.05rem">Experimental prototypes, custom shaders, and micro-interactions.</p>
+        <div class="lab-grid reveal" style="display:grid; gap:16px;">
+           <div style="padding:24px; background:var(--surface); border:1px solid var(--line); border-radius:12px; transition:border-color 0.3s">
+             <h4 style="margin-bottom:8px">Fluid Navigation Bar</h4>
+             <p style="font-size:0.9rem; color:var(--dim)">A gooey, physics-based bottom nav using Flutter CustomPaint.</p>
+           </div>
+           <div style="padding:24px; background:var(--surface); border:1px solid var(--line); border-radius:12px; transition:border-color 0.3s">
+             <h4 style="margin-bottom:8px">Rive Interactive Character</h4>
+             <p style="font-size:0.9rem; color:var(--dim)">A state-machine driven character reacting to user scroll.</p>
+           </div>
+        </div>
+      </div>
+      <div style="flex:1; min-width:300px">
+        <h2 class="sec-label reveal" id="insights-heading"><span class="idx">(05.6)</span><span class="ln"></span>Insights</h2>
+        <p class="reveal" style="margin-bottom:30px; color:var(--dim); font-size:1.05rem">Thoughts on engineering, app design, and motion.</p>
+        <div class="insights-list reveal" style="display:flex; flex-direction:column; gap:16px;">
+           <a href="#" style="padding:24px; background:var(--surface); border:1px solid var(--line); border-radius:12px; display:block; transition:border-color 0.3s">
+             <h4 style="margin-bottom:8px">Why 60fps matters in mobile</h4>
+             <p style="font-size:0.9rem; color:var(--accent)">Read article →</p>
+           </a>
+           <a href="#" style="padding:24px; background:var(--surface); border:1px solid var(--line); border-radius:12px; display:block; transition:border-color 0.3s">
+             <h4 style="margin-bottom:8px">Building scalable Flutter architectures</h4>
+             <p style="font-size:0.9rem; color:var(--accent)">Read article →</p>
+           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="sec-pad" id="contact" aria-labelledby="contact-heading">
+  <div class="wrap">
+    <span class="sec-label reveal"><span class="idx">(06)</span><span class="ln"></span>Contact</span>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2 class="split" id="contact-heading" data-split>Let's build something <span class="accent">remarkable.</span></h2>
+        <p class="reveal">Have an app idea or want to level up an existing product? I'd love to hear about it.</p>
+        <div class="channels reveal">
+          <a href="/cdn-cgi/l/email-protection#80e8e5ececefc0edefe8e9e2e1e8ede1e4aee4e5f6" class="channel" aria-label="Send email to Mohib Ahmad">
+            <div class="ch-i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <div><small>Email</small><b><span class="__cf_email__" data-cfemail="e189848d8d8ea18c8e89888380898c8085cf858497">[email&#160;protected]</span></b></div>
+            <div class="ch-arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          </a>
+          <a href="#" class="channel" aria-label="Contact Mohib Ahmad on WhatsApp">
+            <div class="ch-i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 01-12.5 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1121 11.5z"/></svg></div>
+            <div><small>WhatsApp</small><b>+92 300 0000000</b></div>
+            <div class="ch-arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          </a>
+          <a href="#" class="channel" aria-label="Visit Mohib Ahmad's GitHub profile">
+            <div class="ch-i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 00-1-2.6c3-.3 6-1.5 6-6.5a5 5 0 00-1.4-3.5 4.6 4.6 0 00-.1-3.5s-1.1-.3-3.5 1.3a12 12 0 00-6 0C6.6 1.2 5.5 1.5 5.5 1.5a4.6 4.6 0 00-.1 3.5A5 5 0 004 8.5c0 5 3 6.2 6 6.5a3.4 3.4 0 00-1 2.6V22"/></svg></div>
+            <div><small>GitHub</small><b>github.com/mohibahmad</b></div>
+            <div class="ch-arr" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          </a>
+        </div>
+        <a href="Mohib-Ahmad-Resume.pdf" download class="btn btn-ghost contact-cv" aria-label="Download resume (PDF)">Download my resume / CV
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        </a>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="field"><label for="contactName">Your name</label><input type="text" id="contactName" required placeholder="John Doe"></div>
+        <div class="field"><label for="contactEmail">Email</label><input type="email" id="contactEmail" required placeholder="john@email.com"></div>
+        <div class="field"><label for="contactBudget">Project budget</label><input type="text" id="contactBudget" placeholder="$5k — $20k+"></div>
+        <div class="field"><label for="contactMessage">Tell me about it</label><textarea id="contactMessage" required placeholder="I'd like to build..."></textarea></div>
+        <button type="submit" class="btn btn-primary">Send message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap">
+    <div class="foot-mega" id="footMega">
+      <span class="l"><span>LET'S</span></span>
+      <span class="l"><span>TALK.</span></span>
+    </div>
+    <div class="foot-row">
+      <div class="foot-copy">© 2026 <b>Mohib Ahmad</b> — Designed & developed with care.</div>
+      <div class="foot-socials">
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3v9zM6.5 8.3a1.8 1.8 0 110-3.5 1.8 1.8 0 010 3.5zM19 19h-3v-4.7c0-1.1 0-2.5-1.5-2.5S13 13 13 14.2V19h-3v-9h2.9v1.2h.04c.4-.75 1.4-1.5 2.8-1.5 3 0 3.6 2 3.6 4.5V19z"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.3 8.3L23 22h-6.6l-5.2-6.7L5.3 22H2.2l7.8-8.9L1.5 2h6.8l4.7 6.2L18.9 2zm-1.2 18h1.8L7.4 4H5.5l12.2 16z"/></svg></a>
+        <a href="#" aria-label="Dribbble"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.6 5.6a8.3 8.3 0 011.9 5.2c-.3-.1-3-.6-5.7-.3-.1-.3-.2-.5-.3-.8 3-1.2 4-3 4-4.1zM12 3.7c2 0 3.9.8 5.3 2-.9 1.3-2.7 2.8-5.3 3.8a31 31 0 00-3.6-5.6c1.1-.5 2.3-.2 3.6-.2zM6.9 4.9a36 36 0 013.5 5.5c-3.4.9-6.4.9-6.8.9A8.3 8.3 0 016.9 4.9zM3.7 12v-.3c.4 0 3.9.1 7.6-1 .2.4.4.8.5 1.2-3.4 1.1-5.4 4-5.6 4.3A8.3 8.3 0 013.7 12zm8.3 8.3c-1.9 0-3.6-.6-5-1.7.1-.3 1.6-3.2 5.4-4.6 1 2.5 1.3 4.6 1.4 5.2-.6.6-1.2.9-1.8 1.1zm3.4-1.2c-.1-.6-.4-2.6-1.3-5 2.5-.4 4.7.3 5 .4a8.3 8.3 0 01-3.7 4.6z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TO TOP -->
+
+</main>
+
+<a href="#hero" class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="module" src="/main.js"></script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1232c594dc8a813',t:'MTc4MjU0OTkwMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
